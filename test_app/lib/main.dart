@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
             ),
           ),
           appBar: AppBar(
-            backgroundColor: Colors.greenAccent,
+            backgroundColor: Color.fromARGB(255, 5, 192, 225),
             toolbarHeight: 60,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
