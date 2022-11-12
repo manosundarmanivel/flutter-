@@ -31,7 +31,8 @@ class _MyAppState extends State<MyApp> {
               children: [
                 DrawerHeader(
                   child: Text('DIALAB'),
-                  decoration: BoxDecoration(color: Colors.greenAccent),
+                  decoration:
+                      BoxDecoration(color: Color.fromARGB(255, 5, 192, 225)),
                 ),
                 ListTile(
                   title: Text("List 1"),
@@ -67,7 +68,7 @@ class _MyAppState extends State<MyApp> {
             ),
           ),
           bottomNavigationBar: BottomNavigationBar(
-              backgroundColor: Colors.greenAccent,
+              backgroundColor: Color.fromARGB(255, 5, 192, 225),
               unselectedItemColor: Colors.black,
               selectedItemColor: Colors.white,
               currentIndex: current_index,

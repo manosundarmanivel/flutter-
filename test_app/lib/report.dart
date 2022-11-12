@@ -13,6 +13,7 @@ class _reportState extends State<report> {
     return Scaffold(
       appBar: AppBar(
           title: Text('Patient Report'),
+          backgroundColor: Color.fromARGB(255, 5, 192, 225),
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(25),
@@ -50,7 +51,7 @@ class Box extends StatelessWidget {
           gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.topRight,
-              colors: [Colors.blue, Colors.pink]),
+              colors: [Color.fromARGB(255, 5, 192, 225), Colors.blue]),
           borderRadius: BorderRadius.circular(10)),
       margin: const EdgeInsets.all(10),
       padding: const EdgeInsets.all(20),
@@ -160,7 +161,7 @@ class Appointment extends StatelessWidget {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.topRight,
-                  colors: [Colors.blue, Colors.pink]),
+                  colors: [Color.fromARGB(255, 5, 192, 225), Colors.blue]),
               borderRadius: BorderRadius.circular(10)),
           width: 380,
           height: 150,
