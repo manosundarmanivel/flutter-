@@ -28,12 +28,12 @@ class _reportState extends State<report> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Appointment(),
-          Box(
-            title: 'hello',
-          ),
-          Box(
-            title: 'hello2',
-          )
+          // Box(
+          //   title: 'hello',
+          // ),
+          // Box(
+          //   title: 'hello2',
+          // )
         ],
       ),
     );
