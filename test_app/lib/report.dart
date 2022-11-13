@@ -12,7 +12,10 @@ class _reportState extends State<report> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text('Patient Report'),
+          title: Text(
+            'Patient Report',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
           backgroundColor: Color.fromARGB(255, 5, 192, 225),
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
@@ -46,19 +49,23 @@ class Box extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.topRight,
-              colors: [Color.fromARGB(255, 5, 192, 225), Colors.blue]),
-          borderRadius: BorderRadius.circular(10)),
-      margin: const EdgeInsets.all(10),
-      padding: const EdgeInsets.all(20),
-      width: 380,
-      height: 100,
-      //color: Colors.greenAccent,
-      child: Center(child: Text(title)),
+    return Row(
+      children: [
+        Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.topRight,
+                  colors: [Color.fromARGB(255, 5, 192, 225), Colors.blue]),
+              borderRadius: BorderRadius.circular(10)),
+          //margin: const EdgeInsets.all(10),
+          //padding: const EdgeInsets.all(20),
+          width: 150,
+          height: 150,
+          //color: Colors.greenAccent,
+          child: Center(child: Text(title)),
+        ),
+      ],
     );
   }
 }
@@ -89,12 +96,15 @@ class Appointment extends StatelessWidget {
                       children: [
                         Text(
                           'Dr. Mano Sundar',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                         SizedBox(height: 3),
                         Text(
                           'Medical Proffesional',
-                          style: TextStyle(color: Colors.white38),
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 249, 235, 235),
+                              fontWeight: FontWeight.bold),
                         )
                       ],
                     ),
@@ -126,10 +136,8 @@ class Appointment extends StatelessWidget {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 10, left: 10),
-                          child: Text(
-                            'January 12 at 09:00 AM - 10:00 AM',
-                            style: TextStyle(color: Colors.white),
-                          ),
+                          child: Text('January 12 at 09:00 AM - 10:00 AM',
+                              style: TextStyle(color: Colors.white)),
                         ),
                       ],
                     ),
@@ -151,10 +159,10 @@ class Appointment extends StatelessWidget {
                           ),
                         ),
                       ],
-                    )
+                    ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
           decoration: BoxDecoration(
@@ -167,6 +175,34 @@ class Appointment extends StatelessWidget {
           height: 150,
           margin: EdgeInsets.all(10),
         ),
+        SizedBox(height: 30),
+        Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Box(title: 'Acetone Level'),
+                Box(title: 'Glucose Level')
+              ],
+            ),
+            SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Box(title: 'Acetone Level'),
+                Box(title: 'Glucose Level')
+              ],
+            ),
+            SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Box(title: 'Acetone Level'),
+                Box(title: 'Glucose Level')
+              ],
+            )
+          ],
+        )
       ],
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_app/login.dart';
 import 'package:test_app/report.dart';
 
 void main() {
@@ -30,14 +31,21 @@ class _MyAppState extends State<MyApp> {
               padding: EdgeInsets.zero,
               children: [
                 DrawerHeader(
-                  child: Text('DIALAB'),
+                  child: Text(
+                    'DIALAB',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                   decoration:
                       BoxDecoration(color: Color.fromARGB(255, 5, 192, 225)),
                 ),
                 ListTile(
-                  title: Text("List 1"),
+                  title: Text(
+                    "List 1",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const login()));
                   },
                 )
               ],
@@ -53,7 +61,10 @@ class _MyAppState extends State<MyApp> {
             actions: <Widget>[
               IconButton(onPressed: (() {}), icon: Icon(Icons.account_circle))
             ],
-            title: Text('DiaLab'),
+            title: Text(
+              'DiaLab',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
           ),
           body: Center(
             child: ElevatedButton(
@@ -78,7 +89,10 @@ class _MyAppState extends State<MyApp> {
                 });
               },
               items: [
-                BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.home),
+                  label: 'Home',
+                ),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.personal_injury), label: 'Patient'),
                 BottomNavigationBarItem(
